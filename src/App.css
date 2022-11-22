@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+/* common property */
+.text-teal {
+  color: teal
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-teal {
+  background-color: teal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+/* menu */
+.navbar {
+  background-color: #ccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar .navbar-nav .nav-item .nav-link,
+.navbar .navbar-brand {
+  color: #888;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-nav>.nav-item>.nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: teal;
+  border-left: 2px solid teal;
+  transition: border 0.5s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* home section */
+#homeSection {
+  background: url('./images/bg-home.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+#about {
+  height: 100vh;
+}
+
+.card-img-top {
+  height: 270px;
+}
+
+/* Profile */
+#profile {
+  height: 100vh;
+}
+
+#profile .profile-title {
+  color: #222222;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+#profile .profile-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid teal;
+  position: releative;
+}
+
+#profile .section-title p {
+  text-align: justify;
+  text-indent: 100px;
+}
+
+#profile .profile-item h4 {
+  color: #1d685f;
+  line-height: 18px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+#profile .profile-item h5 {
+  color: teal;
+  font-size: 16px;
+  padding: 5px 15px;
+  background: #effbf9;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#profile .profile-item::before {
+  content: " ";
+  position: absolute;
+  border: 2px solid teal;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: -9px;
+  top: 0px;
+  background: #fff;
+}
+
+#footer {
+  background-color: transparent;
+}
+
+#pnf {
+  height: 100vh;
+}
+
+/* contact */
+#contact .card {
+  border: none;
+}
+
+#contact .contact-form .form-input {
+  box-shadow: none;
+  outline: none;
+  color: #555;
+}
+
+#contact .contact-item i {
+  font-size: 1.8;
+}
+
+#contact .contact-lable h4 {
+  color: teal;
+}
+
+#contact .contact-lable p {
+  color: #555;
 }

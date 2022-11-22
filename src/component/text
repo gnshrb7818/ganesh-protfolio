@@ -1,0 +1,207 @@
+import React from 'react'
+import {NavLink} from 'react-router-dom'
+
+function Pnf(){
+return(
+<section id="pnf" className="d-flex align-items-center">
+    <div className="container-fluid">
+        <div className="row">
+            <div className="col-md-12 text-center">
+                <h1 className="display-3 text-danger">OOPS! Something Went Wrong</h1>
+                <h3 className="display-5 text-warning">Requested path Not Found</h3>
+                <h4 className="display-6 text-danger">404 Error</h4>
+                <NavLink to={`/`} className="btn btn-success"> Return Home</NavLink>
+
+            </div>
+        </div>
+    </div>
+</section>
+)
+}
+export default Pnf
+
+
+
+import React from 'react'
+import {NavLink} from 'react-router-dom'
+
+
+
+function Menu(){
+return(
+<nav className="navbar navbar-expand-md navbar-dark fixed-top  ">
+    <div className="container">
+        <NavLink to={'/'} className="navbar-brand"> Portfolio-Amrutha</NavLink>
+
+        <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse justify-content-end" id="menu">
+            <ul className="navbar-nav text-center ">
+                <li className="nav-item">
+                    <NavLink to={'/home'} className="nav-link">Home</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to={'/about'} className="nav-link">About</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to={'/profile'} className="nav-link">Profile</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to={'/portfolio'} className="nav-link">Portfolio</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to={'/contact'} className="nav-link">Contact</NavLink>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+)
+}
+export default Menu
+
+
+
+
+/* common properties */
+.text-teal{color:teal;}
+.bg-teal{background-color: teal;}
+
+
+/menu/
+
+.navbar{
+background-color: #ccc;
+}
+
+.navbar .navbar-nav .nav-item .nav-link,
+.navbar .navbar-brand{
+color: #333;
+font-weight: 600;
+}
+
+.navbar-nav >.nav-item>.nav-link:hover,
+.navbar .navbar-brand:hover
+{
+color:teal;
+border-left:1px solid teal;
+transition: border 0.5s ease-in-out;
+}
+
+/* home */
+#homeSection{
+background:url('./images/bg-home.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height: 100vh;
+}
+.footer{
+background: transparent;
+}
+#pnf{
+height:100vh;
+}
+
+
+import React from 'react'
+
+function Footer(){
+return(
+<section id="footer" className="fixed-bottom">
+    <div className="container-fluid">
+        <div className="row">
+            <div className="col-md-12 text-center">
+                <p className="text-dark">
+                    &copy; copyRight
+                    <strong className="text-teal">Amrutha</strong>, All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+)
+}
+export default Footer
+
+
+
+
+import React from 'react'
+import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import './App.css'
+import Menu from './Header/Menu'
+import Home from './component/Home'
+import Pnf from './component/Pnf'
+import Footer from './Header/Footer'
+
+
+function App(){
+return(
+<BrowserRouter>
+    <Menu />
+
+    <Routes>
+        <Route path={'/'} element={<Home />} />
+        <Route path={'/home'} element={<Home />} />
+        <Route path={'/*'} element={<Pnf />} />
+    </Routes>
+    <Footer />
+</BrowserRouter>
+)
+}
+export default App
+
+
+
+
+import React from 'react'
+
+function Home(){
+return(
+<section id="homeSection" className="d-flex align-items-center">
+    <div className="container-fluid">
+        <div className="row">
+            <div className="col-md-12 text-center">
+                <h2 className="display-1 text-teal">Amruthavarshini H.J </h2>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-md-12 text-center">
+                <h6 className="display-6 text-secondary">
+                    I'm a Professional Web Developer trained in the area of React and Redux,Node and Express Js
+                </h6>
+            </div>
+        </div>
+    </div>
+</section>
+)
+}
+export default Home
+
+
+
+import React from 'react'
+import {NavLink} from 'react-router-dom'
+
+function Pnf(){
+    return(
+        <section id="pnf" className="d-flex align-items-center">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <h1 className="display-3 text-danger">OOPS! Something Went Wrong</h1>
+                        <h3 className="display-5 text-warning">Requested path Not Found</h3>
+                        <h4 className="display-6 text-danger">404 Error</h4>
+                        <NavLink to={`/`} className="btn btn-success"> Return Home</NavLink>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+ export default Pnf
